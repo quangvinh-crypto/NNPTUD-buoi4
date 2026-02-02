@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   
   if (title) {
     filteredData = filteredData.filter(product => 
-      product.title.toLowerCase().includes(title.toLowerCase())
+      product.title && product.title.toLowerCase().includes(title.toLowerCase())
     );
   }
   
